@@ -43,7 +43,7 @@
 
 #### License:
 
- Collatz is released under the GPLv3.
+ Goldbach is released under the GPLv3.
 
 #### Contact:
 
