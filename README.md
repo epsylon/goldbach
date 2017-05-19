@@ -13,7 +13,7 @@
 
  This is very useful to simplify human abstraction level.
 
- There are 3 posible modes for interaction: single random, manual and learning.
+ There are 3 possible modes for interaction: single random, manual and learning.
 
     - single random (default): Just a simple random test that will allow you to understand how it works.
     - manual: You can search for results on any number you enter.
