@@ -10,6 +10,8 @@ Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 import os, sys
 import matplotlib.pyplot as plt
 
+plt.rcParams.update({'figure.max_open_warning': 0})
+
 class Goldbach(object):
     def __init__(self):
         self.l="love"
@@ -79,6 +81,7 @@ class Goldbach(object):
             y = t.rsplit('+',1)[1] 
             ax.scatter(self.tree.index(t)+1, x, color="red", s=2)
             ax.scatter(self.tree.index(t)+1, y, color="green", s=2)
+        plt.clf() # removing matplot future warning
         header = '"Tree" for number '+str(self.root)
         plt.title(header)
         plt.ylabel('Number(s)')
