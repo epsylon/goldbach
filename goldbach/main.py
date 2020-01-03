@@ -9,6 +9,7 @@ Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 """
 import os, sys
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 plt.rcParams.update({'figure.max_open_warning': 0})
 
@@ -74,14 +75,20 @@ class Goldbach(object):
             print('     - Tree =', self.tree)
         plt.figure()
         fig = plt.figure(1)
-        ax = fig.add_subplot(111, facecolor='black')
+        ax = plt.gca(projection="3d")
+        xs = []
+        ys = []
+        zs = []
         for t in self.tree:
-            x = t.rsplit('=',1)[1]
-            x = x.rsplit('+',1)[0] 
-            y = t.rsplit('+',1)[1] 
-            ax.scatter(self.tree.index(t)+1, x, color="red", s=2)
-            ax.scatter(self.tree.index(t)+1, y, color="green", s=2)
-        plt.clf() # removing matplot future warning
+            z = float(t.rsplit('=',1)[0])
+            l = t.rsplit("+",2)[0]
+            x = float(l.rsplit("=",1)[1])
+            y = float(t.rsplit('+',1)[1])
+            xs.append(x)
+            ys.append(y)
+            zs.append(z)
+        ax.scatter(xs,ys,zs, c='red',s=100)
+        ax.plot(xs,ys,zs, color='green')
         header = '"Tree" for number '+str(self.root)
         plt.title(header)
         plt.ylabel('Number(s)')
@@ -102,6 +109,7 @@ class Goldbach(object):
             if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
                 print("\n[Info] You have this 'tree' secuence previously saved...\n")
         ax.clear()
+        plt.clf()
         print(75*"=", "\n")
 
     def generate_forest(self, rng):
