@@ -21,14 +21,12 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Running environment:**
- - UFONet version [e.g. 1.4]
+ - goldbach version [e.g. 0.2]
  - Installation method [e.g. git]
  - Operating system: [e.g. Debian 4.19.16-1~bpo9+1 (2019-02-07) ]
  - Python version [e.g. 3.7]
 
-**Target details:**
- - UFONet techniques found by ufonet [e.g. ZOMBIES, UFOSYN, TACHYON]
- - WAF/IPS [if any]
+**Error details:**
  - Relevant console output [if any]
  - Exception traceback [if any]
 
