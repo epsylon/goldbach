@@ -24,18 +24,23 @@
 
 #### Installing:
 
- This tool runs on many platforms and it requires Python (2.x.y). To generate graphs, you need 
- to install the following library:
+ This tool runs on many platforms and it requires Python (3.x.y). To generate graphs, you need to install the following library:
 
-       python-matplotlib - Python based plotting system in a style similar to Matlab
+       python3-matplotlib - Python based plotting system in a style similar to Matlab (Python 3)
 
  On Debian-based systems (ex: Ubuntu), run: 
 
-       sudo apt-get install python-matplotlib
+       sudo apt-get install python3-matplotlib
 
  Or:
-       
-       pip install matplotlib
+
+       pip3 install matplotlib
+
+#### Executing:
+  
+  python3 goldbach
+
+----------
 
 ####  Source libs:
 
